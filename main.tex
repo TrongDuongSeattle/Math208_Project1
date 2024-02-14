@@ -1,10 +1,11 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{gensymb}
  \usepackage{systeme}
 \usepackage{graphicx} % Required for inserting images
 
 \title{Project 1}
-\author{Trong Duong}
+\author{Trong Duong, The Hung Nguyen, Fedor Polyanskiy}
 \date{February 2024}
 
 \begin{document}
@@ -31,7 +32,7 @@ $
 1 & 3 & 9 & 27 & 81 & 243 & 7.2 \\
 1 & 4 & 16 & 64 & 256 & 1024 & 14.8 \\
 1 & 5 & 25 & 125 & 625 & 3125 & 25.7 
-\end{bmatrix}  \sim
+\end{bmatrix}  \approx
 \begin{bmatrix}
 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 1 & 0 & 0 & 0 & 0 & 1.64 \\
@@ -52,7 +53,11 @@ $
 \end{align*}
 $f(x) = 0 + 1.64x - 1.0917x^2 + 0.6083x^3 - 0.0583x^4 + 0.0017x^5$ \\
 
-1c.) The force when the the projectile is moving 350 ft/sec is 1057.1094 pounds.
+1c.) To calculate the force due to air friction at 350ft/sec. We need to convert 350ft/sec to the unit of x (100ft/sec). Therefore, in this case, x will be 3.5.
+
+$f(3.5) = 0 + 1.64(3.5) - 1.0917(3.5)^2 + 0.6083(3.5)^3 - 0.0583(3.5)^4 + 0.0017(3.5)^5 \approx 10.5918 (lb) $ 
+
+When moving at 350 ft/sec, the object experiences a force of 10.5918 (lbs) due to air friction.
 \\  
 \\
 2a) The linear system to model this situation is: 
@@ -62,15 +67,17 @@ $f(x) = 0 + 1.64x - 1.0917x^2 + 0.6083x^3 - 0.0583x^4 + 0.0017x^5$ \\
     0.90x_1 + 0.88x_2 + 0.95x_3 &= 0.92 \\
     0.62x_1 + 0.70x_2 + 0.55x_3 &= 0.65 
 \end{align*}
-2b The augmented matrix and it's RREF. The weights cannot be calculated.
-okay that's actually questionable
+where $x_1$, $x_2$, and $x_3$ are the weight for Exam 1, Exam 2, and Final Exam respectively.
+\\
+\\
+2b The augmented matrix and its RREF. The weights cannot be calculated because the system is inconsistent. 
 \\
 $\begin{bmatrix}
 0.85 & 0.75 & 0.70 & 0.77 \\
 0.8 & 0.92 & 0.82 & 0.84 \\
 0.90 & 0.99 & 0.95 & 0.92 \\
 0.62 & 0.70 & 0.55 & 0.65 
-\end{bmatrix}   \sim
+\end{bmatrix}   =
 \begin{bmatrix}
 1 & 0 & 0 & 0 \\
 0 & 1 & 0 & 0 \\
@@ -80,7 +87,7 @@ $\begin{bmatrix}
 $
 \\
 \\
-2c. The grades have not been calculated correctly because there is a row of the form [0 0 0 0 b] where b is non-zero. Therefore the weights cannot be calculated QUESTIONABLE
+2c. The grades have not been calculated correctly because there is a row of the form [0 0 0 0 b] where b is non-zero. Therefore, the system is inconsistent, thus, there are no {$x_1$,$x_2$,$x_3$} that can represent the weight for these assessments
 \\
 \\
 3a
@@ -147,13 +154,37 @@ x_8 = free
 3c) Since this is a one way road, there can be be no negative flow. Therefore $x_8$ must be positive.   
 \\ 
 \\
-4a) RREF of augmented matrix of Mac \& cheese, broccoli, and chicken
+4a) Converting the table to a matrix:
+\\
+ $\begin{bmatrix}
+270  \\
+10  \\
+2 
+\end{bmatrix} 
+$x_1$ +
+ $\begin{bmatrix}
+51  \\
+5.4  \\
+5.2 
+\end{bmatrix} 
+$x_2$ +
+ $\begin{bmatrix}
+70  \\
+15  \\
+0
+\end{bmatrix} 
+$x_3$
+\\
+where $x_1$, $x_2$, and $x_3$ are the number of servings for Mac and Cheese, Broccoli, and Chicken respectively.
+\\
+\\
+RREF of augmented matrix of Mac \& cheese, broccoli, and chicken
 
  $\begin{bmatrix}
 270 & 51 & 70 & 400 \\
 10 & 5.4 & 15 & 30 \\
-2 & 5.2 & 0 & 5 
-\end{bmatrix}  \sim
+2 & 5.2 & 0 & 10 
+\end{bmatrix}  \approx
 \begin{bmatrix}
 1 & 0 & 0 & 0.9858 \\
 0 & 1 & 0 & 1.5439 \\ 
@@ -168,12 +199,36 @@ She should use:
     and 0.7870 servings of chicken 
     \\
     \\
-4b) new augmented matrix
+4b) new augmented matrix:
+\\
+\\
+ $\begin{bmatrix}
+260  \\
+9  \\
+5 
+\end{bmatrix} 
+$x_1$ +
+ $\begin{bmatrix}
+51  \\
+5.4  \\
+5.2 
+\end{bmatrix} 
+$x_2$ +
+ $\begin{bmatrix}
+70  \\
+15  \\
+0
+\end{bmatrix} 
+$x_3$
+\\
+where $x_1$, $x_2$, and $x_3$ are the number of servings for Shells, Broccoli, and Chicken respectively.
+\\
+\\
 $ \begin{bmatrix}
 260 & 51 & 70 & 400 \\
 9 & 5.4 & 15 & 30 \\
 5 & 5.2 & 0 & 10 
-\end{bmatrix}  \sim
+\end{bmatrix}  \approx
  \begin{bmatrix}
 1 & 0 & 0 & 1.0890 \\
 0 & 1 & 0 & 0.8760 \\
@@ -183,7 +238,7 @@ $ \begin{bmatrix}
 \\
 she should use: 
     1.0890 servings of Annie's Whole Wheat Shells \& White Cheddar,
-    08.7860 servings of broccoli,
+    0.87860 servings of broccoli,
     and 1.0312 servings of chicken.
 \\
 \\
@@ -200,7 +255,7 @@ $ \begin{bmatrix}
 -1 & 4 & -1 & 0 & 60 \\
 0 & -1 & 4 & -1 & 70 \\
 -1 & 0 & -1 & 4 & 40 
-\end{bmatrix}  \sim
+\end{bmatrix}  \approx
 \begin{bmatrix}
 1 & 0 & 0 & 0 & 20 \\
 0 & 1 & 0 & 0 & 27.5 \\
@@ -209,10 +264,10 @@ $ \begin{bmatrix}
 \end{bmatrix}
 $
 \begin{align*}
-    T_1 &= 20 \\
-    T_2 &= 27.5 \\
-    T_3 &= 30 \\
-    T_4 &= 22.5 \\
+    T_1 &= 20\degree \\
+    T_2 &= 27.5\degree \\
+    T_3 &= 30\degree \\
+    T_4 &= 22.5\degree \\
 \end{align*}
 
 \end{document}
